@@ -7,7 +7,7 @@ variables:
 - name: AZSUBSCRIPTION  
   value: MyCloud
 - name: RESOURCE_GROUP
-  value: kops-rg
+  value: Devops-rg
 
 
 stages:
@@ -24,7 +24,7 @@ stages:
       name: privkey
       displayName: 'Download Private Key'
       inputs:
-        secureFile: id_demo
+        secureFile: id_jenkins
     - script: |                
         sudo chmod 400 $(privkey.secureFilePath)
         sudo mkdir -p $HOME/.ssh  
